@@ -7,13 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/features",
-		tags="@smoketest",
+		tags= {"@smoketest2 or @smoketest"},
 		glue = "stepDefinitions",
 		stepNotifications=true,
 		dryRun = false,
 		plugin= {"html:target/cucumber-html-report",
-				"json:target/json/cucumber.json",
-				  "junit:target/cucumberxml.xml"
+					"json:target/json/cucumber.json",
+					"junit:target/cucumberxml.xml"
 				}
 		)
 public class TestRunner {
